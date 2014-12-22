@@ -12,7 +12,7 @@
 
 	$strSQL = "INSERT INTO temporary_db(username, email, password, code) VALUES('" . $username . "' , '" . $email "' ,'" . $password . "','" . $code . "')";
 	mysql_query($strSQL);
-
+	mysql_close();
 	//now send email ye
 	
 	//subject
@@ -31,5 +31,5 @@
 	else{
 		echo "An error occurred";
 	}
-
+	
 	?>
