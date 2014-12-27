@@ -1,0 +1,39 @@
+<html>
+
+</html>
+
+<head>
+    <LINK href="testCSS.css" rel="stylesheet" type="text/css">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script type="text/javascript" >
+    	$(document).ready(function(){
+			$('a[href^="#"]').on('click',function (e) {
+	   	 e.preventDefault();
+
+	    		var target = this.hash;
+	    		var $target = $(target);
+
+	  			$('html, body').stop().animate({
+	        'scrollTop': $target.offset().top
+	    		}, 900, 'swing', function () {
+	       	 window.location.hash = target;
+	    		});
+			
+			});
+		});
+    </script>
+</head>
+
+<body>
+	<div id="div1">
+		<div class="centralDiv">
+			<a href="#div2">CLICK HERE YOU LIL <br> FUCKN <br> BITCH</a>
+		</div>
+	</div>
+	<div id="div2"> 
+		<div class="centralDiv">
+			<a href="#div1">Mmmmmm, you like that don't you? <br> You dirty, dirty little Jew</a>
+		</div>
+	</div>
+
+</body>
