@@ -1,16 +1,20 @@
 function passwordStrength(){
 	//this function is run from html file on keypress in password field
 	//tests password strength y'all
-	var valid = false
 	var p = 0;
-	var pass = $('password').value;
-	var number = Boolean(pass.match(/\d+/));
-	var len = Boolean((pass.length < 16) && (pass.length > 7));
-	if((pass.match(/[a-z]/))&&(pass.match(/[A-Z]/)){
+	var pass = (document.getElementById("pass").value);
+	var number = false;
+	if(pass.match(/\d+/)){
+		number = true;
+	}
+	var len = false;
+	if((pass.length < 16) && (pass.length > 7)){
+		len = true;
+	}
+
+	if((pass.match(/[a-z]/))&&(pass.match(/[A-Z]/))){
 		p++;
 	}
-	var number = Boolean(pass.match(/\d+/));
-	var len = Boolean((pass.length < 16) && (pass.length > 7));
 	if(pass.length > 11){
 		p++;
 	}
@@ -19,37 +23,29 @@ function passwordStrength(){
 	}
 	
 	
-	if((number = true)&&(len = true) && (p==0)){
-		$('indicator').innerHTML('Weak');
-		valid = true;
+	if((number === true)&&(len === true) && (p==0)){
+		document.getElementById("indicator").innerHTML = "Weak" ;
+	
 	}
 
-	if((number = true)&&(len = true) && (p==1)){
-		$('indicator').innerHTML('Moderate');
-		valid = true;
+	if((number === true)&&(len === true) && (p==1)){
+		document.getElementById('indicator').innerHTML = "Moderate";
+	
 	}
 
-	if((number = true)&&(len = true) && (p==2)){
-		$('indicator').innerHTML('Strong');
-		valid = true;
+	if((number === true)&&(len === true) && (p==2)){
+		document.getElementById('indicator').innerHTML = "Strong";
+	
 	}
 
-	if((number = true)&&(len = true) && (p==3)){
-		$('indicator').innerHTML('Very Strong');
-		valid = true;
+	if((number === true)&&(len === true) && (p==3)){
+		document.getElementById('indicator').innerHTML = "Very Strong";
+	
 	}
-	if((number = false) || (len = false)){
-		$('indicator').innerHTML('Invalid Password');
-	}
-	return valid;
+	
 }
 
-function register(){
-	valid = passwordStrength();
-
-	if(valid = true){
+function submit(){
 		//adds the sheffield domain to the email prefix given
-		$('email').value = ($('email').value).concat('sheffield.ac.uk');
-		$('submit').submit;
-	}
+		document.getElementById('email').value = (document.getElementById('email').value).concat('sheffield.ac.uk');
 }
