@@ -7,10 +7,10 @@
 <body>
 	<form action="form_test.php" method="post">
 		<p> email: </p>
-		<input type="text" name="email" id="email">
-		<p style="float:right">@sheffield.ac.uk<p>
+		<input style="float:left;" type="text" name="email" id="email">
+		<p>@sheffield.ac.uk<p>
 		<p> password </p>
-		<input type="password" name="pass" id="pass" onkeypress="passwordStrength()">
+		<input type="password" name="pass" id="pass" onkeyup="passwordStrength()">
 		<input type="submit">
 		<p id="indicator"></p>
 	</form>
