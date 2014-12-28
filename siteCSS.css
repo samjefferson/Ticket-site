@@ -39,6 +39,23 @@ body{
    cursor: hand;
 }
 
+.buttonDiv{
+	width: 47%;
+	background-color: white;
+	color: #4D94FF;
+	float: left;
+	border: 2px solid;
+   border-radius: 25px;
+}
+
+#loginSubmitButton{
+	float: right;
+}
+
+#loginOptionsDiv{
+	border: 0px;
+}
+
 input[type="text"] {
     width: 100%;
     height: 70px;
